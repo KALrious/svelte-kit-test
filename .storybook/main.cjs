@@ -1,5 +1,3 @@
-const svelteConfig = require('../svelte.config.js');
-
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -11,11 +9,11 @@ module.exports = {
     "@storybook/addon-interactions"
   ],
   "framework": "@storybook/svelte",
-  "core": {
-    "builder": "@storybook/builder-vite"
-  },
+  // "core": {
+  //   "builder": "@storybook/builder-vite"
+  // },
   "svelteOptions": {
-    "preprocess": svelteConfig.preprocess
+    // "preprocess": import('../svelte.config.js').preprocess
   },
   "features": {
     "storyStoreV7": true
