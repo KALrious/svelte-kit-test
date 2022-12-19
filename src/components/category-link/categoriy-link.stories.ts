@@ -1,12 +1,12 @@
-import Button from './Button.svelte';
+import CategoryLink from './category-link.svelte';
 
 export default {
-	component: Button,
-	title: 'Design System/Button'
+	component: CategoryLink,
+	title: 'Design System/CategoryLink'
 };
 
 const Template = ({ ...args }) => ({
-	Component: Button,
+	Component: CategoryLink,
 	props: args
 });
 
@@ -14,5 +14,6 @@ export const Default = Template.bind({});
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 //@ts-ignore
 Default.args = {
-	label: 'Button'
+	href: '/',
+	name: 'Category'
 };
