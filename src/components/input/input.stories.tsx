@@ -10,10 +10,9 @@ const Template = ({ ...args }) => ({
 	props: args
 });
 
-export const Default = Template.bind({});
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-//@ts-ignore
-Default.args = {
+export const Defaults = Template.bind({});
+
+Defaults.args = {
 	placeholder: 'Enter your name',
 	type: 'email'
 };
