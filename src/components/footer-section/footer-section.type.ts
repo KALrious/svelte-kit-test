@@ -1,3 +1,4 @@
 export type MainMenu = {
-    url: string
-}
+	url: string;
+	label: string;
+};
