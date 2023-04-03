@@ -1,7 +1,12 @@
-<script>
+<script lang="ts">
 	import Header from './Header.svelte';
+	import { onMount } from 'svelte';
 	import './styles.css';
 	import '../app.css';
+	import FooterSection from '../components/footer-section/footer-section.svelte';
+	import type { MainMenu } from '../components/footer-section/types/footer-section.type.js';
+	/** @type {import('./$types').LayoutData} */
+	export let data: { mainMenu: MainMenu[] };
 </script>
 
 <div class="app">
@@ -11,9 +16,7 @@
 		<slot />
 	</main>
 
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
+	<FooterSection mainMenu={data.mainMenu} />
 </div>
 
 <style>
@@ -32,23 +35,5 @@
 		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
 	}
 </style>

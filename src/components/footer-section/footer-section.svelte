@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Button from 'src/components/button/Button.svelte';
-	import type { MainMenu } from 'src/components/footer-section/footer-section.type';
-	import IconButton from 'src/components/icon-button/icon-button.svelte';
-	import Input from 'src/components/input/input.svelte';
+	import Button from '../button/Button.svelte';
+	import type { MainMenu } from './types/footer-section.type';
+	import IconButton from '../icon-button/icon-button.svelte';
+	import Input from '../input/input.svelte';
 
 	export let mainMenu: MainMenu[];
 
@@ -67,7 +67,7 @@
 					<h3 class="mt-3 mb-5">Subscribe Newsletter</h3>
 					<form action="#" class="flex flex-col gap-3">
 						<Input type="email" placeholder="Email" />
-						<Button>Subscribe</Button>
+						<Button label="Subscribe" />
 					</form>
 				</div>
 			</div>

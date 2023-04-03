@@ -54,6 +54,7 @@
   },
   "type": "module",
   "dependencies": {
+    "buttercms": "^1.2.9",
     "date-fns": "^2.29.3"
   }
 }
